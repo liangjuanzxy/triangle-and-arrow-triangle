@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+
+        .triangle {
+            width: 0;
+            height: 0;
+            border-width: 0 30px 30px;
+            border-style: solid;
+            border-color: transparent transparent #333; /*透明 透明  灰*/
+            margin:10px auto;
+            position: relative;
+        }
+        .triangle span {
+            display: block;
+            width: 0;
+            height: 0;
+            border-width: 0 28px 28px;
+            border-style: solid;
+            border-color: transparent transparent paleturquoise; /*透明 透明  黄*/
+            position: absolute;
+            top: 1px;
+            left: -28px;
+            box-shadow:0 0 2px rgba(0,0,0,1);//为了区分特意加的边框
+        }
+/*原理为一个大三角形，一个小三角形，大的相对定位，小的绝对定位定到大的里面*/
+
+       p{
+           width: 0;
+           height: 0;
+           border-left: 20px solid #c0c0c0;
+           border-right: 20px solid #c0c0c0;
+           border-top: 20px solid palevioletred;
+           border-bottom: 20px solid palevioletred;
+       }
+    </style>
+</head>
+<body>
+
+<div class="triangle">
+    <span></span>
+</div>
+
+<p></p>
+
+<br/>
+
+</body>
+</html>

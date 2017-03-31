@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        #triangle {
+            width: 120px;
+            height: 20px;
+            position: relative;
+            border: 1px #808080 solid;
+            border-right: none;
+            background-color: #fff;
+        }
+
+        #triangle:before {
+            content: " ";
+            position: absolute;
+            top: -1px ;
+            left: 100%;
+            width: 0;
+            height: 0;
+            border-left: 11px solid  #808080 ;
+            border-top: 11px solid transparent;
+            border-bottom: 11px solid transparent;
+        }
+
+        #triangle:after {
+            content: " ";
+            position: absolute;
+            top: 0;
+            left: 100%;
+            width: 0;
+            height: 0;
+            border-left: 10px solid #fff;
+            border-top: 10px solid transparent;
+            border-bottom:10px solid transparent;
+        }
+
+        #triangle:hover {
+            background-color: #ff0000;
+        }
+
+        #triangle:hover:after {
+            width: 0;
+            height: 0;
+            border-left: 10px solid #ff0000;
+            border-top: 10px solid transparent;
+            border-right: 10px solid transparent;
+        }
+    </style>
+</head>
+<body>
+<div id="triangle">
+    空心三角形
+</div>
+</body>
+</html>
